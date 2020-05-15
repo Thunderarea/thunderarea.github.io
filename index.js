@@ -8,7 +8,6 @@ $(document).ready(() => {
   typeWriter();
 
   function typeWriter() {
-    console.log(i);
     if (i < text.length) {
       container.text(container.text() + "" + text.charAt(i));
       i++;
