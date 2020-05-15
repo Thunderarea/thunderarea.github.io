@@ -1,0 +1,81 @@
+@font-face {
+  font-family: audiowide;
+  src: url(fonts/Audiowide/Audiowide-Regular.ttf);
+}
+
+@font-face {
+  font-family: quicksandLight;
+  src: url(fonts/Quicksand/static/Quicksand-Light.ttf);
+}
+
+header {
+  background-color: #000000d6;
+}
+
+.logo {
+  font-family: audiowide;
+}
+
+.navbar-brand.logo {
+  margin: auto;
+}
+
+#home {
+  height: 100vh;
+  padding: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/thunder1920.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.homeText {
+  color: white;
+  font-size: 1.7rem;
+}
+
+#home .logo {
+  margin-bottom: 20px;
+  font-size: 4rem;
+}
+
+.home_description {
+  font-family: monospace;
+  font-size: 1.7rem;
+}
+
+@media (max-width:1920px) {
+  #home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/thunder1920.jpg);
+  }
+  #home .logo {
+    font-size: 4rem;
+  }
+  .home_description {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width:768px) {
+  #home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/thunder768.jpg);
+  }
+  #home .logo {
+    font-size: 2.7rem;
+  }
+  .home_description {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width:430px) {
+  #home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/thunder430.jpg);
+  }
+  #home .logo {
+    font-size: 2rem;
+  }
+  .home_description {
+    font-size: 1.3rem;
+  }
+}
