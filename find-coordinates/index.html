@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find Coordinates">
+  <meta name="keywords" content="find coordinates by clicking on map,thunderarea, nick pantelidis, pantelidis, music mode for youtube">
+  <meta name="author" content="Thunderarea">
+
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css">
+  <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="../bitnami.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+  <link rel="manifest" href="../favicon/site.webmanifest">
+  <title>Find Coordinates by clicking on Map</title>
+</head>
+
+<body>
+  <div id="messages_container"></div>
+  <div id="map_container">
+    <div id="map"></div>
+    <div id="style_menu">
+        <div>
+            <input id="satellite-v9" type="radio" name="rtoggle" value="satellite" checked="checked">
+            <label for="satellite-v9"><span class="iconify right" data-icon="si-glyph:satellite" data-inline="false"></span>Δορυφόρος</label>
+        </div>
+        <div>
+            <input id="streets-v11" type="radio" name="rtoggle" value="streets">
+            <label for="streets-v11"><span class="iconify right" data-icon="si-glyph:road" data-inline="false"></span>Χάρτης</label>
+        </div>
+    </div>
+  </div>
+  <script src="map-initialization.js" charset="utf-8"></script>
+</body>
+
+</html>
