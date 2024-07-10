@@ -73,7 +73,7 @@ function addMap() {
                 var coordinates = e.lngLat;
                 new mapboxgl.Popup()
                   .setLngLat(coordinates)
-                  .setHTML('<div><span class="title">Latitude: </span><input type="text" class="value" value="' + coordinates["lat"] + '"><span class="iconify left copy-button" data-icon="bi:clipboard"></span></div><div><span class="title">Longitude: </span><input type="text" class="value" value="' + coordinates["lng"] + '"><span class="iconify left copy-button" data-icon="bi:clipboard"></span></div>')
+                  .setHTML(getHTMLContent(coordinates, map.getZoom()))
                   .addTo(map);
               } );
             });
@@ -83,7 +83,7 @@ function addMap() {
                     copyText.select();
                     copyText.setSelectionRange(0, 99999); /* For mobile devices */
                     navigator.clipboard.writeText(copyText.value);
-                    let el_1 = `<div class="copied-message">The value copied</div>`;
+                    let el_1 = `<div class="copied-message">The value was copied</div>`;
                     el_1 = new DOMParser().parseFromString(el_1, "text/html").body.firstElementChild;
                     messagesContainer.appendChild(el_1);
                     setTimeout(() => {
@@ -92,6 +92,26 @@ function addMap() {
                 }
             });
     }
+}
+
+function getHTMLContent(coordinates, zoom) {
+    return `
+    <div>
+        <span class="title">Latitude: </span>
+        <input type="text" class="value" value="${coordinates.lat}">
+        <span class="iconify left copy-button" data-icon="bi:clipboard"></span>
+    </div>
+    <div>
+        <span class="title">Longitude: </span>
+        <input type="text" class="value" value="${coordinates.lng}">
+        <span class="iconify left copy-button" data-icon="bi:clipboard"></span>
+    </div>
+    <div>
+        <span class="title">Zoom: </span>
+        <input type="text" class="value" value="${zoom}">
+        <span class="iconify left copy-button" data-icon="bi:clipboard"></span>
+    </div>
+    `;
 }
 
 addMap();
