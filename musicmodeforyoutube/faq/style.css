@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+html {
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  /* width: 100%; */
+  padding: 10px 25px;
+  box-sizing: border-box;
+}
+
+header img {
+  height: 70px;
+}
+
+main {
+  max-width: 1200px;
+}
+
+#page-title {
+  margin: 20px 0;
+  text-align: left;
+  padding-left: 25px;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.accordion {
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px 0px #d2d2d2;
+  background-color: white;
+  text-align: left;
+  overflow: hidden; /* For border-radius to display properly */
+}
+
+.accordion-header {
+  font-family: "Outfit", sans-serif;
+  background-color: white;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  padding: 16px 25px;
+  border-bottom: 0.5px solid #e7e7e8;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.accordion-header h2 {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.accordion-header::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M15.88 9.29L12 13.17L8.12 9.29a.996.996 0 1 0-1.41 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59a.996.996 0 0 0 0-1.41c-.39-.38-1.03-.39-1.42 0'/%3E%3C/svg%3E");
+  line-height: 0;
+}
+
+.accordion-item.active .accordion-header::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M11.29 8.71L6.7 13.3a.996.996 0 1 0 1.41 1.41L12 10.83l3.88 3.88a.996.996 0 1 0 1.41-1.41L12.7 8.71a.996.996 0 0 0-1.41 0'/%3E%3C/svg%3E");
+}
+
+.accordion-content {
+  font-weight: 300;
+  padding: 0 25px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion-item.active .accordion-content {
+  border-bottom: 0.5px solid #e7e7e8;
+}
+
+.italic {
+  font-style: italic;
+}
+
+h3 {
+  font-size: 1.0625rem;
+  font-weight: 600;
+}
