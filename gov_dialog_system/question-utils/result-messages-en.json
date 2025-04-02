@@ -1,0 +1,82 @@
+[
+  {
+    "text": "Δικαιούται και ο συνοδός το ίδιο δελτίο μετακίνησης.",
+    "conditions": [
+      [
+        {
+          "question": "q5",
+          "answer": [0, 1],
+          "should": true
+        }
+      ]
+    ]
+  },
+  {
+    "text": "Δικαιούστε έκπτωση 50% για τις εκτός ορίων της περιφέρειας σας μετακινήσεις με υπεραστικά ΚΤΕΛ.",
+    "conditions": [
+      [
+        {
+          "question": "q7",
+          "answer": [0],
+          "should": false
+        }
+      ]
+    ]
+  },
+  {
+    "text": "Δικαιούσαι δωρεάν μετακίνησης με τα αστικά μέσα συγκοινωνίας της περιφέρειας σου και έκπτωση 50% για τις εκτός ορίων της περιφέρειας σου μετακινήσεις με υπεραστικά ΚΤΕΛ.",
+    "conditions": [
+      [
+        {
+          "question": "q7",
+          "answer": [1],
+          "should": true
+        },
+        {
+          "question": "q5",
+          "answer": [0],
+          "should": false
+        },
+        {
+          "question": "q8",
+          "answer": [0],
+          "should": true
+        }
+      ]
+    ]
+  },
+  {
+    "text": "Δικαιούσαι έκπτωση 50% για τις εκτός ορίων της περιφέρειας σου μετακινήσεις με υπεραστικά ΚΤΕΛ.",
+    "conditions": [
+      [
+        {
+          "question": "q7",
+          "answer": [1],
+          "should": true
+        },
+        {
+          "question": "q5",
+          "answer": [0],
+          "should": false
+        },
+        {
+          "question": "q8",
+          "answer": [1],
+          "should": true
+        }
+      ],
+      [
+        {
+          "question": "q7",
+          "answer": [1],
+          "should": true
+        },
+        {
+          "question": "q5",
+          "answer": [1],
+          "should": true
+        }
+      ]
+    ]
+  }
+]
